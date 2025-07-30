@@ -1,13 +1,12 @@
-🧑‍💻 Author
-Dhyey Patel
+# 🧑‍💻 Dhyey Patel
 
-# 🛠️ DBT + Snowflake: Customer Lifetime Value Pipeline
+## 🛠️ DBT + Snowflake: Customer Lifetime Value Pipeline
 
 This project demonstrates a full modern data pipeline using [dbt](https://www.getdbt.com/) and [Snowflake](https://www.snowflake.com/) to model and calculate **Customer Lifetime Value (LTV)** and engagement metrics from raw CSV inputs.
 
 ---
 
-## 📦 Project Structure
+### 📦 Project Structure
 dbt-oncourse-prep/
 ├── models/
 │ ├── staging/
@@ -23,7 +22,7 @@ dbt-oncourse-prep/
 
 ---
 
-## 🔍 Use Case
+### 🔍 Use Case
 
 We calculate each customer's:
 - 🛒 Total orders
@@ -34,7 +33,7 @@ We calculate each customer's:
 
 ---
 
-## 🧠 Key Concepts Covered
+### 🧠 Key Concepts Covered
 
 | Feature            | Description                                       |
 |--------------------|---------------------------------------------------|
@@ -47,7 +46,7 @@ We calculate each customer's:
 
 ---
 
-## ✅ Data Quality Tests Included
+### ✅ Data Quality Tests Included
 
 - Unique + not-null checks on all primary keys
 - Schema-defined tests in `models/staging/schema.yml`
@@ -55,7 +54,7 @@ We calculate each customer's:
 
 ---
 
-## 🚀 How to Run Locally
+### 🚀 How to Run Locally
 
 ```bash
 # Set up virtual environment
