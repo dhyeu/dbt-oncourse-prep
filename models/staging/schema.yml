@@ -1,0 +1,54 @@
+version: 2
+
+models:
+  - name: stg_customers
+    description: "Cleaned and renamed customer data"
+    columns:
+      - name: customer_id
+        description: "Unique customer identifier"
+        tests:
+          - not_null
+          - unique
+      - name: email
+        description: "Customer email"
+        tests:
+          - not_null
+
+  - name: stg_orders
+    description: "Cleaned orders data"
+    columns:
+      - name: order_id
+        description: "Unique order identifier"
+        tests:
+          - not_null
+          - unique
+      - name: customer_id
+        description: "FK to customers"
+        tests:
+          - not_null
+
+  - name: stg_events
+    description: "Event stream data per customer"
+    columns:
+      - name: event_id
+        description: "Unique event identifier"
+        tests:
+          - not_null
+          - unique
+      - name: customer_id
+        description: "FK to customers"
+        tests:
+          - not_null
+
+  - name: customer_ltv
+    description: "Final LTV and engagement table"
+    columns:
+      - name: customer_id
+        description: "Primary key for customers"
+        tests:
+          - not_null
+          - unique
+      - name: lifetime_value
+        description: "Sum of order amounts"
+        tests:
+          - not_null
