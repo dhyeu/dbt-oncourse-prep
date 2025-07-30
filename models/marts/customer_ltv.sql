@@ -30,7 +30,7 @@ customer_agg as (
         c.country,
         c.signup_date,
         count(distinct o.order_id) as total_orders,
-        sum(o.order_amount) as lifetime_value,
+        coalesce(sum(o.order_amount), 0) as lifetime_value,
         min(o.order_date) as first_order_date,
         max(o.order_date) as most_recent_order,
         count(e.event_id) as total_events,
